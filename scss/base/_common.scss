@@ -1,0 +1,198 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    font-family: 'Nunito', sans-serif !important;
+    // font-family: 'Barlow', sans-serif;
+}
+::selection {
+    background-color: #112a6e;
+    color: white;
+}
+
+a{
+    text-decoration: none !important;
+    color: inherit !important;   
+}
+
+
+li{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+figure{
+    margin: 0 !important;
+    overflow: hidden;
+    img{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    margin: 0 !important;
+}
+
+h1{
+    font-size: 2.5rem !important; //40px
+}
+h2{
+    font-size: 2rem !important; //32px
+}
+h3{
+    font-size: 1.75rem !important; //28px
+}
+h4{
+    font-size: 1.375rem !important; //22px
+}
+h5{
+    font-size: 1.25rem !important; //20px
+}
+h6{
+    font-size: 1.125rem !important; //18px
+}
+
+.section-gutter{
+    margin-top: 5.625rem; //90px
+}
+
+.primary-btn{
+    padding-top: 10px;
+    color:$white;
+    a{
+        width: max-content;
+        padding: 10px 24px;
+        background-color: $primary-color;
+        font-weight: 500;
+        font-size: 1.125rem;
+        &:hover{
+            background-color: #00185a;
+        }
+        i{
+            padding-left: 14px;   
+        }
+    }
+}
+button.primary-btnz{
+    width: max-content;
+    padding: 10px 24px;
+    background-color: $primary-color;
+    font-weight: 500;
+    font-size: 1.125rem;
+    border: 0;
+    color: $white;
+    margin-top: 2.25rem;
+    &:hover{
+        background-color: #00185a;
+    }
+    i{
+        padding-left: 14px;   
+    }
+}
+
+.error{
+    font-size: 14px;
+    color: red;
+}
+
+.description{
+    line-height: 26px;
+    text-align: justify;
+    color: #3A3636;
+    letter-spacing: 0.04em;
+}
+
+.section-sub-heading,
+.section-main-heading{
+    text-align: center; 
+}    
+
+.section-sub-heading{
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: $secondary-color;
+    @include font-barlow;
+}
+.section-main-heading{
+    @include font-roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.03em;
+    color:$primary-color;
+}
+
+.owl-carousel {
+    position: relative;
+    .owl-nav{
+        display: flex;
+        justify-content: end;
+        .owl-prev,
+        .owl-next {
+            width: 3rem;
+            height: 3rem;
+            background-color: $primary-color !important;
+            // border: 2px solid #8b8b8b !important;
+            padding: 0.625rem !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 !important;
+            i {
+                color: $white;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.owl-dots {
+    padding: 4px 0;
+    border-radius: 20px;
+    span{
+        background-color: $primary-color !important;
+        padding: 0 5px;
+        width: 6px !important;
+        height: 6px !important;
+        margin: 5px !important;
+    }
+    .active{
+        span{
+            background-color: $primary-color !important;
+            padding: 0 14px;
+        }
+    }
+    .owl-dots {
+        padding: 4px 0;
+        border-radius: 20px;
+        span{
+            background-color: $primary-color !important;
+            padding: 0 5px;
+            width: 6px !important;
+            height: 6px !important;
+            margin: 5px !important;
+        }
+        .active{
+            span{
+                background-color: $primary-color !important;
+                padding: 0 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@mixin flex-center {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin absolute-center {
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin font-roboto {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@mixin font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+@mixin font-barlow {
+    font-family: 'Barlow', sans-serif;
+}
+

@@ -1,0 +1,39 @@
+.service-detail{
+    .section-main-heading,
+    .section-sub-heading{
+        text-align: left;
+    }
+    figure{
+        margin: 2.25rem 0 !important;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            background-color: $fade-primary-color;
+            padding: 22px 0 17px 27px;
+            margin-bottom:1.5rem ;
+            font-weight: 500;
+            font-size: 18px;
+            @include font-roboto;
+            &::before{
+                padding-right: 0.5rem;
+                font-family: "Font Awesome 5 Free";
+                content: "\f061";
+                font-size: 13px;
+                font-weight: 800;
+            }
+            &:hover{
+                background-color: $primary-color;
+                color: $white;
+            }
+            a{
+                transition: 500ms;
+                &:hover{
+                    margin-left: 10px;
+                    transition: 500ms;
+                }
+            }
+        }
+    }
+}

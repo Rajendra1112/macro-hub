@@ -1,0 +1,171 @@
+.classes-detail{
+    .section-main-heading,
+    .section-sub-heading{
+        text-align: left;
+    }
+    figure{
+        margin: 2.25rem 0 !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-weight: 700;
+        font-size: 1.5rem !important;
+        color: $primary-color;
+        margin: 1.25rem 0 !important; 
+    }
+    p{
+        margin-bottom: 1rem !important;
+    }
+    .accordion{
+        margin-top: 2.25rem;
+        .accordion-item{
+            margin-bottom: 1.25rem;
+            border: 0;
+            .accordion-button{
+                border-radius: 0 !important;
+                background-color: $fade-primary-color;
+                font-weight: 700;
+                font-size: 1.125rem;
+                color: $primary-color;
+                &:focus{
+                    box-shadow: none;
+                }
+                &::before{
+                    padding-right: 1.75rem;
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f061";
+                    font-size: 13px;
+                    font-weight: 800;
+                }
+            }
+            .accordion-body{
+                border: 1px solid $fade-primary-color;
+            }
+        }
+    }
+    .classes-detail-wrapper{
+        margin: 2.25rem 0;
+        .class-info-wrapper{
+            display: flex;
+            align-items: center;
+            gap: 2.25rem;
+            margin-bottom: 2.25rem;
+            padding-left: 30px;
+            background-color: $fade-primary-color;
+            height: 100%;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .icon-wrapper{
+                @include flex-center;
+            }
+            span{
+                font-size: 1rem;
+                line-height: 24px;
+                color: $secondary-color;
+            }
+            .detail{
+                font-size: 1.125rem;
+                color: $primary-color;
+                font-weight: 700;
+            }
+        }
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            background-color: $fade-primary-color;
+            padding: 22px 0 17px 27px;
+            margin-bottom:1.5rem ;
+            font-weight: 500;
+            font-size: 18px;
+            @include font-roboto;
+            &::before{
+                padding-right: 0.5rem;
+                font-family: "Font Awesome 5 Free";
+                content: "\f061";
+                font-size: 13px;
+                font-weight: 800;
+            }
+            &:hover{
+                background-color: $primary-color;
+                color: $white;
+            }
+            a{
+                transition: 500ms;
+                &:hover{
+                    margin-left: 10px;
+                    transition: 500ms;
+                }
+            }
+        }
+    }
+    .side-form-wrapper{
+        background-color: #F0F0F0;
+        figure{
+            position: relative;
+            &::before,&::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            &::before{
+                background-color: $secondary-color;
+                clip-path: polygon(100% 0%, 100% 84%, 50% 100%, 0% 84%, 0% 0%);
+            }
+            &::after{
+                background-color: $primary-color;
+                clip-path: polygon(100% 0%, 100% 79%, 50% 99.7%, 0% 79%, 0% 0%);
+            }
+            img{
+                clip-path: polygon(100% 0%, 100% 72%, 50% 99.5%, 0% 72%, 0% 0%);
+                transition: 1s ;
+                z-index: 1;
+                position: relative;
+            }
+            figcaption{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                @include absolute-center;
+                @include flex-center;
+                flex-direction:column;
+                z-index: 1;
+                clip-path: polygon(100% 0%, 100% 72%, 50% 100%, 0% 72%, 0% 0%);
+                font-weight: 700;
+                font-size: 24px;
+                @include font-roboto;
+                color: $white;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(32, 65, 154, 0.60);
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+        .side-form{
+            padding: 0 30px 75px;
+            .form-wrapper{
+                margin-bottom: 1rem ;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .form-label{
+                color: #595757;
+                font-weight: 500;
+            }
+            button{
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

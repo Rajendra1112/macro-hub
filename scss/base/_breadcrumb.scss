@@ -1,0 +1,69 @@
+
+.breadcrumb-all{
+    // height: 455px;
+    // text-transform:uppercase;
+    color: white !important;
+    position: relative;
+    figure{
+        position: relative;
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &::before{
+            background-color: $secondary-color;
+            clip-path: polygon(100% 0%, 100% 84%, 50% 100%, 0% 84%, 0% 0%);
+        }
+        &::after{
+            background-color: $primary-color;
+            clip-path: polygon(100% 0%, 100% 79%, 50% 99.7%, 0% 79%, 0% 0%);
+        }
+        img{
+            clip-path: polygon(100% 0%, 100% 72%, 50% 99.5%, 0% 72%, 0% 0%);
+            transition: 1s ;
+            z-index: 1;
+            position: relative;
+        }
+    }
+    figcaption{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include absolute-center;
+        @include flex-center;
+        flex-direction:column;
+        z-index: 1;
+        clip-path: polygon(100% 0%, 100% 72%, 50% 100%, 0% 72%, 0% 0%);
+        @include font-roboto;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(32, 65, 154, 0.60);
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .breadcrumb-heading{
+            font-weight: 700;
+            font-size: 2.25rem;
+            line-height: 42px;
+            margin-bottom: 10px;
+        }
+        .breadcrumb{
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        .breadcrumb-item.active {
+            color: $white !important;
+        }
+        .breadcrumb-item+.breadcrumb-item::before{
+            color: $white !important;
+        }
+    }
+}

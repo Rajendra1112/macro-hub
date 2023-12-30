@@ -1,0 +1,63 @@
+// about-us
+.about-us{
+    .section-sub-heading,
+    .section-main-heading{
+        text-align:start; 
+    }    
+    .description{
+        margin:1.25rem 0 2.25rem;
+        p{
+            margin-bottom: 1.125rem !important;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .multi-img{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 4rem;
+        height: 100%;
+        figure:not(:last-child){
+            margin-top: auto !important;
+        }
+        img{
+            width: max-content !important;
+            height: max-content !important;
+        }
+    }
+}
+
+.message-manager{
+    .message-manager-wrapper{
+        background-color: $fade-primary-color;
+        .col-lg-6{
+            margin-top: 0;
+        }
+        figure{
+            height: 100%;
+        }
+        .message-content-wrapper{
+            padding: 2.75rem 2.75rem 2.254rem 2.254rem;
+            .section-sub-heading, .section-main-heading{
+                text-align: start;
+            }
+            .description{
+                margin:1.5rem 0;
+            }
+            .name{
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 26px;
+                color: $primary-color;
+                @include font-roboto;
+            }
+            .designation{
+                font-weight: 700;
+            }
+            &:nth-child(2n){
+                background-color: red;
+            }
+        }
+    }
+}

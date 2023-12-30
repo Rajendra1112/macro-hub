@@ -1,0 +1,155 @@
+footer{
+    // padding: 2.5rem 0 1.5rem 0;
+    // background-color: #081A3E;
+    background: url(../images/image\ 32.png) no-repeat;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    a:hover{
+        color: $secondary-color !important;
+    }
+    .footer-img{
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &::after{
+            content: '';    
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+    }
+    .main-footer{
+        padding: 50px 0 0;
+        border-bottom: 1px solid #D1D1D1; background:url(../images/footer-bg.png) ;
+        font-size: 1.125rem;
+        .footer-logo{
+            width:159px;
+            height:125px;
+            img{
+                filter: brightness(0) invert(1) ;
+            }
+        }
+        .footer-description{
+            text-align: justify;
+            padding: 1.5rem 1.25rem 1.5rem 0;
+            line-height: 26px;
+        }
+        figure{
+            width:5.625rem; //90px
+            height: auto;
+        }
+        .footer-socials{
+            a{
+                margin-right: 2.875rem;
+                font-size: 1.5rem;
+            }
+        }
+        .footer-title{
+            font-weight: 500;
+            font-size: 1.375rem;
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+            @include font-roboto;
+            position: relative;
+            width: max-content;
+            .line{
+                // content: '';
+                background-color: $white;
+                position: absolute;
+                height: 2px;
+                bottom: -3px;
+            }
+            .line1{
+                width: 67px;
+                left: 0;
+            }
+            .line2{
+                width: 17px;
+                left: 76px;
+            }
+            .line3{
+                width: 17px;
+                left: 102px;
+            }
+        }
+        ul{
+            margin-bottom: 0;
+            padding: 0;
+            li:not(:last-child){
+                margin-bottom: .75rem;
+            }
+        }
+        .locations{
+            display: flex;
+            flex-direction:column ;
+            gap: 0.625rem;
+        }
+    }
+    .bottom-footer-wrapper{
+        margin-top: 50px;
+        padding: 2.5rem 0;
+        gap: .625rem;
+        font-size: 1rem;
+        background: #142355;
+        .bottom-footer{
+            @include flex-between;
+        }
+        a{
+            // font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .links{
+            a{
+                font-size: 0.75rem;
+                margin-left: 1.25rem;
+            }
+        }
+    }
+    .scroll-top-wrapper.show {
+        visibility: visible;
+        cursor: pointer;
+        opacity: 1.0;
+    }
+    .scroll-top-wrapper {
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        text-align: center;
+        z-index: 10;
+        background-color: rgb(237 28 36 / 70%);
+        color: $white;
+        width: 55px;
+        height: 54px;
+        line-height: 7px;
+        right: 15px;
+        bottom: 120px;
+        padding-top: 14px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        i.fa {
+            line-height: inherit;
+        }
+        .scroll-top {
+            margin-top: 0px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.1;
+        }
+    }
+}
